@@ -274,4 +274,13 @@ img {
     display: flex;
     flex-direction: column;
   }
+    .contain_kom {
+    flex-direction: column;
+  }
+  .komissar_text, .komandir_text {
+    opacity: 1;
+  }
+  .year_text {
+    font: italic 14px "Inconsolata";
+  }
 }
