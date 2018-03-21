@@ -1,0 +1,277 @@
+/*Основа*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font: normal 16px sans-serif;
+  color: #555;
+}
+nav {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  font-weight: 400;
+}
+a:hover {
+  font-weight: bold;
+}
+
+/*Шапка*/
+
+header {
+  width: 100%;
+  height: 150px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  position: fixed;
+  padding: 10px 20px;
+  transition: .3s;
+}
+
+header.navbar {
+  background-color: rgba(255, 165, 0, 0.6);
+  height: 60px;
+  padding: 10px 20px;
+}
+
+header h2 {
+  font-weight: 400;
+  font-family: "Quicksand";
+}
+header nav {
+  display: flex;
+  font-style: italic;
+  font-family: "Open Sans" sans-serif;
+  padding: 10px;
+}
+header nav li {
+  margin: 0 15px;
+}
+
+ .photo_third, .photo_second {
+  position: relative;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+  background-position: center;
+}
+
+.photo_main {
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 80px;
+}
+
+.background_image {
+  background-image: url('../img/main_photo.jpg');
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  opacity: 0.5;
+}
+.photo_second {
+  background-image: url('../img/photo2.jpg');
+  min-height: 700px;
+  opacity: 0.6;
+}
+.photo_third {
+  background-image: url('../img/photo3.jpg');
+  min-height: 500px;
+  opacity: 0.6;
+}
+
+.text_photo_main {
+  position: absolute;
+}
+
+.social_btns {
+  position: absolute;
+  top: 85%;
+  display: flex;
+  z-index: 3;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+}
+
+.vk {
+  margin-right: 10px;
+  opacity: 0.6;
+  flex-basis: 15%;
+}
+
+.insta {
+  margin-left: 10px;
+  opacity: 0.6;
+  flex-basis: 15%;
+}
+
+.insta:hover {
+  opacity: 1;
+}
+
+.vk:hover {
+  opacity: 1;
+}
+
+
+.text_photo_main h1 {
+  font: bold 60px "Open Sans", sans-serif;
+  margin-bottom: 20px;
+}
+
+.text_photo_main h3 {
+  font: 28px "Open Sans", sans-serif;
+}
+
+/*Секция 1*/
+
+section {
+  min-height: 200px;
+  overflow: hidden;
+  background-color: #f2f5f9;
+}
+
+
+section h1 {
+  text-align: center;
+  margin: 40px;
+  text-decoration: none;
+  font: 30px "Open Sans", sans-serif;
+  color: #341C5E;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+hr {
+/*  background-color: blue;*/
+
+}
+
+.box_first_year, .box_second_year, .box_third_year, .box_fourth_year, .box_fifth_year {
+  display: flex;
+  justify-content: center;
+  margin: 10px 40px;
+  align-items: center;
+}
+
+.box_second_year, .box_fourth_year {
+  flex-direction: row-reverse;
+}
+
+.main_title {
+  margin: 30px 0px;
+  text-align: center;
+  color: #00358c;
+  font: bold 32px "Quicksand", sans-serif;
+}
+
+.year_text {
+  font: italic 20px "Inconsolata";
+  flex-basis: 50%;
+  padding: 0px 20px;
+  text-align: justify;
+}
+
+.year_img {
+  flex-basis: 50%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Секция 2 */
+
+.contain_kom {
+  text-align: center;
+  padding: 0 50px;
+  flex-direction: row;
+  display: flex;
+  width: 100%;
+  min-height: 100px;
+  justify-content: center;
+  margin: 20px;
+  align-items: center;
+}
+
+.komandir {
+  width: 100%;
+  flex-basis: 25%;
+  min-height: 400px;
+  margin-right: 10px;
+  position: relative;
+}
+.komissar {
+  flex-basis: 25%;
+  width: 100%;
+  min-height: 400px;
+  margin-left: 10px;
+  position: relative;
+}
+.komandir_text {
+  order: -1;
+}
+
+.komissar_text, .komandir_text {
+  padding: 0 10px;
+  flex-basis: 25%;
+  font: italic 20px "Inconsolata";
+  opacity: 0;
+  color: rgb(25, 25, 112);
+
+}
+.komissar:hover + .komissar_text {
+  animation: text_animation 1s forwards ease-in-out;
+}
+.komandir:hover + .komandir_text {
+  animation: text_animation 1s forwards ease-in-out;
+}
+
+
+@keyframes text_animation {
+  25% {
+    opacity: 0.2;
+  }
+  50% {
+  opacity: 0.4;
+    font-weight: 200;
+  }
+  75% {
+    opacity: 0.5;
+    font-weight: 300;
+  }
+  100% {
+    font-size: 22px;
+  opacity: 1;
+    font-weight: 400;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .box_first_year, .box_second_year, .box_third_year, .box_fourth_year, .box_fifth_year {
+    display: flex;
+    flex-direction: column;
+  }
+}
