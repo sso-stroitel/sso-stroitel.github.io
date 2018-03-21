@@ -283,4 +283,7 @@ img {
   .year_text {
     font: italic 14px "Inconsolata";
   }
+  .header {
+    font: normal 12px sans-serif;
+  }
 }
