@@ -6,7 +6,7 @@
 }
 
 html {
-  font: normal 16px sans-serif;
+  font: normal 18px sans-serif;
   color: #555;
 }
 nav {
@@ -251,6 +251,9 @@ img {
 
 
 @keyframes text_animation {
+  0% {
+    transform: translateY(-200%);
+  }
   25% {
     opacity: 0.2;
   }
@@ -263,27 +266,64 @@ img {
     font-weight: 300;
   }
   100% {
-    font-size: 22px;
   opacity: 1;
     font-weight: 400;
+    transform: translateY(0%);
   }
 }
 
 @media screen and (max-width: 770px) {
+  header h2 {
+    font-size: 14px;
+    padding: 5px;
+  }
+  header nav li {
+    font-size: 12px;
+  }
+
+  header.navbar {
+    height: 50px;
+  }
+
   .box_first_year, .box_second_year, .box_third_year, .box_fourth_year, .box_fifth_year {
     display: flex;
     flex-direction: column;
   }
-    .contain_kom {
+
+  .year_text {
+    padding: 20px 0px;
+   }
+
+  .contain_kom {
     flex-direction: column;
   }
+
+  .komandir, .komissar {
+    width: 75%;
+    padding: 0;
+    margin: 0;
+  }
+
   .komissar_text, .komandir_text {
     opacity: 1;
+    font-size: 16px;
+    text-align: justify;
+    width: 75%;
+    padding: 0;
+    padding: 0;
   }
+  .komissar:hover + .komissar_text {
+    animation: none
+  }
+  .komandir:hover + .komandir_text {
+    animation: none
+  }
+
   .year_text {
-    font: italic 14px "Inconsolata";
+    font: italic 16px "Inconsolata";
   }
-  .header {
-    font: normal 12px sans-serif;
+
+  .vk, .insta {
+    flex-basis: 25%;
   }
 }
